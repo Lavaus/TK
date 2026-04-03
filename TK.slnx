@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="TK/TK.csproj" />
+  <Project Path="TK_test/TK_test.csproj" />
 </Solution>

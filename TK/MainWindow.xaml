@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TK"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Периметры фигур" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="247*"/>
+            <RowDefinition Height="187*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="one" Content="1-я сторона" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="50,40,0,0" VerticalAlignment="Top" Visibility="HIdden" Height="26" Width="75"/>
+        <Label Name="two" Content="2-я сторона" HorizontalAlignment="Left" Margin="50,90,0,0" VerticalAlignment="Top" Visibility="HIdden" Height="26" Width="75"/>
+        <Label Name="tree" Content="3-я сторона" HorizontalAlignment="Left" Margin="50,140,0,0" VerticalAlignment="Top" Visibility="HIdden" Height="26" Width="75"/>
+        <Label Name="radius" Content="Радиус" HorizontalAlignment="Left" Margin="50,190,0,0" VerticalAlignment="Top" Visibility="HIdden" Height="26" Width="48"/>
+        <Label Content="Вид фигуры" HorizontalAlignment="Left" Margin="0,37,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="75"/>
+        <TextBox Name="one_t" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="HIdden" Height="18"/>
+        <TextBox Name="two_t" HorizontalAlignment="Left" Margin="200,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="HIdden" Height="18"/>
+        <TextBox Name="tree_t" HorizontalAlignment="Left" Margin="200,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="HIdden" Height="18"/>
+        <TextBox Name="radius_t" HorizontalAlignment="Left" Margin="200,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="HIdden" Height="18"/>
+
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="151" Margin="0,63,0,0" VerticalAlignment="Top" Width="323">
+            <RadioButton Content="Прямоугольник" Checked="per"/>
+            <RadioButton Content="Круг" Checked="per"/>
+            <RadioButton Content="Треугольник" Checked="per"/>
+        </StackPanel>
+        <Button Grid.Column="1" Content="Вычислить" HorizontalAlignment="Left" Margin="108,33,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="108" Click="Button_Click" />
+        <Label Content="Преиметр =" HorizontalAlignment="Left" Margin="50,40,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="77"/>
+        <TextBox Name="result" HorizontalAlignment="Left" Margin="200,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1" Height="18"/>
+
 
     </Grid>
 </Window>
